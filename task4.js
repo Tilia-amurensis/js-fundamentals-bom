@@ -4,5 +4,14 @@
 // Для перевірки node tests/task4.test.js
 const browserWidth = document.getElementById("widthValue");
 const browserHeight = document.getElementById("heightValue");
-browserWidth.innerHTML =  document.documentElement.clientWidth;
-browserHeight.innerHTML = document.documentElement.clientHeight;
+
+function updateDimensions() {
+    browserWidth.textContent = document.documentElement.clientWidth;
+    browserHeight.textContent = document.documentElement.clientHeight;
+  }
+  
+ 
+  updateDimensions();
+  
+ 
+  window.addEventListener("resize", updateDimensions);
